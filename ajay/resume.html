@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Resume</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- CDN FOR PDEF CONVERTER  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it/dist/markdown-it.min.js"></script>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #rightimage img {
+            border-radius: 50%;
+        }
+
+        #jobsearch {
+            margin: auto;
+            overflow: auto;
+            width: 80vw;
+            height: 600px;
+            background: linear-gradient(to right, rgb(248, 186, 72), rgb(255, 255, 95));
+            box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+            /* margin-left: 5%; */
+
+            padding: 25px;
+
+
+
+             /* display: none; */
+             border-radius: 50px;
+             visibility: hidden;
+             font-size: larger;
+
+        }
+
+        #jobsearch h1 {
+            font-size: 1cm;
+            text-align: center;
+        }
+
+        #jobsearch::-webkit-scrollbar {
+            display: none;
+        }
+
+        #footer button {
+            /* width:10%; */
+            background: linear-gradient(to right, rgb(248, 186, 72), rgb(255, 255, 95));
+            font-size: larger;
+            font-weight: bold;
+            padding: 0.8%;
+            margin-right: 5px;
+            border-radius: 10%;
+            box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+
+        }
+
+        #footer button:hover {
+            background: linear-gradient(to right, rgb(255, 255, 95), rgb(248, 186, 72));
+
+        }
+
+         /* animation css */
+         .center {
+            /* height: 100vh; */
+            margin-top: 14%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            /* background: #000; */
+            /* display: none; */
+            /* visibility: visible; */
+        }
+
+        .wave {
+            width: 5px;
+            height: 100px;
+            background: linear-gradient(45deg, cyan, #fff);
+            margin: 10px;
+            animation: wave 1s linear infinite;
+            border-radius: 20px;
+            /* display: none; */
+        }
+
+        .wave:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        .wave:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        .wave:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+
+        .wave:nth-child(5) {
+            animation-delay: 0.4s;
+        }
+
+        .wave:nth-child(6) {
+            animation-delay: 0.5s;
+        }
+
+        .wave:nth-child(7) {
+            animation-delay: 0.6s;
+        }
+
+        .wave:nth-child(8) {
+            animation-delay: 0.7s;
+        }
+
+        .wave:nth-child(9) {
+            animation-delay: 0.8s;
+        }
+
+        .wave:nth-child(10) {
+            animation-delay: 0.9s;
+        }
+
+        @keyframes wave {
+            0% {
+                transform: scale(0);
+            }
+
+            50% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="head" class="flex justify-between w-10/12 m-auto p-4 ">
+        <h1 class="text-2xl font-bold text-orange-400">resumeBuild</h1>
+        <div id="heada">
+            <!-- <button vlaue="signup" id="signup" class="border-2 p-1 w-20 bg-blue-500 rounded-xl">SignUp</button>
+            <button value="login" id="login" class="border-2 p-1 w-20 bg-blue-500 rounded-xl">login</button> -->
+            <!-- <br> -->
+
+        </div>
+    </div>
+    <hr class=" border-2">
+    <br>
+    <br>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- <div class="col-lg-12 flex"> -->
+            <div class="col-lg-6 overflow-y-auto ">
+                <!-- about section -->
+                <h1 class="text-2xl bg-orange-400 text-white w-11/12">ABOUT SECTION</h1>
+                <br>
+                <br>
+                <div id="about" class="p-4 shadow-2xl w-11/12" style="box-shadow: 0px 0px 2px rgb(160, 160, 160);">
+                    <label for="firstname" class="w-48 font-bold">Firstname:-</label>
+                    <label for="middlename" class="w-44 font-bold">Middlename:-</label>
+                    <label for="lastname" class="w-44 font-bold">Lastname:-</label>
+                    <br>
+                    <input type="text" placeholder="firstname" class="border-2" id="firstname">
+                    <!-- <br> -->
+                    <input type="text" placeholder="middlename" class="border-2" id="middlename">
+                    <input type="text" placeholder="lastname" class="border-2" id="lastname">
+                    <br>
+                    <br>
+                    <label for="file" class="w-72 font-bold">Choosefile:-</label>
+                    <label for="designation" class="w-44 font-bold">Designation:-</label>
+                    <br>
+                    <input type="file" accept="image/*" placeholder="" class="border-2" class="w-32" id="file">
+                    <!-- <br> -->
+                    <input type="text" placeholder="designation" class="border-2" id="designation">
+                    <br>
+                    <br>
+                    <label for="address" class="w-44 font-bold">Address:-</label>
+                    <br>
+                    <input type="text" placeholder="address" class="border" id="address">
+                    <br>
+                    <br>
+                    <label for="email" class="w-48 font-bold">Email:-</label>
+                    <label for="PhoneNo" class="w-44 font-bold">PhoneNo:-</label>
+                    <label for="summary" class="w-44 font-bold">Summary:-</label>
+                    <br>
+                    <input type="email" placeholder="email" class="border-2" id="email">
+                    <input type="number" placeholder="PhoneNo" class="border-2" id="PhoneNo">
+                    <input type="text" placeholder="summary" class="border-2" id="summary">
+                </div>
+                <br>
+                <br>
+                <!-- achivments -->
+                <h1 class="text-2xl bg-orange-400 text-white w-11/12">ACHIEVEMENTS</h1>
+                <br>
+                <br>
+                <div id="achivments" class="p-5 shadow-2xl w-11/12" style="box-shadow: 0px 0px 2px rgb(160, 160, 160);">
+                    <label for="title" class="w-48 font-bold">Title:-</label>
+                    <label for="description" class="w-44 font-bold">Description:-</label>
+                    <br>
+                    <input type="text" placeholder="title" class="border-2" id="title">
+                    <input type="text" placeholder="description" class="border-2" id="description">
+                </div>
+                <br>
+                <br>
+                <!-- experience -->
+                <h1 class="text-2xl bg-orange-400 text-white w-11/12">EXPERIENCE</h1>
+                <br>
+                <br>
+                <div id="experience" class="p-2 shadow-2xl w-11/12" style="box-shadow: 0px 0px 2px rgb(160, 160, 160);">
+                    <label for="title" class="w-48 font-bold">Title:-</label>
+                    <label for="company/organization" class="w-52 font-bold">Company/Organization:-</label>
+                    <label for="location" class="w-48 font-bold">location:-</label>
+                    <br>
+                    <input type="text" placeholder="" class="border-2" id="title2">
+                    <input type="text" placeholder="" class="border-2" id="company/organization">
+                    <input type="text" placeholder="" class="border-2" id="location">
+                    <br>
+                    <br>
+                    <label for="startdate" class="w-36 font-bold">Start Date:-</label>
+                    <label for="enddate" class="w-36 font-bold">End Date:-</label>
+                    <label for="description" class="w-44 font-bold">Description:-</label>
+
+                    <br>
+                    <input type="date" class="border-2" id="startdateexp">
+                    <input type="date" class="border-2" id="enddateexp">
+                    <input type="text" placeholder="description" class="border-2" id="descriptionexp">
+                </div>
+                <br>
+                <br>
+                <!-- education -->
+                <h1 class="text-2xl bg-orange-400 text-white w-11/12">EDUCATION</h1>
+                <br>
+                <br>
+                <div id="education" class="p-4 shadow-2xl w-11/12" style="box-shadow: 0px 0px 2px rgb(160, 160, 160);">
+                    <label for="school" class="w-48 font-bold">School:-</label>
+                    <label for="degree" class="w-48 font-bold">Degree:-</label>
+                    <label for="city" class="w-48 font-bold">City:-</label>
+                    <br>
+                    <input type="text" placeholder="" class="border-2" id="school">
+                    <input type="text" placeholder="" class="border-2" id="degree">
+                    <input type="text" placeholder="" class="border-2" id="city">
+                    <br>
+                    <br>
+                    <label for="startdate" class="w-36 font-bold">Start Date:-</label>
+                    <label for="enddate" class="w-36 font-bold">End Date:-</label>
+                    <label for="description" class="w-44 font-bold">Description:-</label>
+
+                    <br>
+                    <input type="date" class="border-2" id="startdateedu">
+                    <input type="date" class="border-2" id="enddateedu">
+                    <input type="text" placeholder="description" class="border-2" id="descriptionedu">
+                </div>
+                <br>
+                <br>
+                <!-- projects -->
+                <h1 class="text-2xl bg-orange-400 text-white w-11/12">PROJECTS</h1>
+                <br>
+                <br>
+                <div id="projects" class="p-5 shadow-2xl w-11/12" style="box-shadow: 0px 0px 2px rgb(160, 160, 160);">
+                    <label for="projectname" class="w-44 font-bold">Project Name:-</label>
+                    <label for="projectlink" class="w-44 font-bold">Project Link:-</label>
+                    <label for="description" class="w-44 font-bold">Description:-</label>
+                    <br>
+                    <input type="text" placeholder="" class="border-2" id="projectname">
+                    <input type="text" placeholder="" class="border-2" id="projectlink">
+                    <input type="text" placeholder="description" class="border-2" id="descriptionpro">
+                </div>
+                <br>
+                <br>
+                <!-- skill -->
+                <h1 class="text-2xl bg-orange-400 text-white w-11/12">SKILLS</h1>
+                <br>
+                <br>
+                <div id="skillsa" class="p-4 shadow-2xl w-11/12" style="box-shadow: 0px 0px 2px rgb(160, 160, 160);">
+
+                    <label for="skillsa" class="font-bold">Skills</label>
+                    <br>
+                    <input type="text" class="w-96 border-2" id="skills">
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+            <div class="col-lg-6 sm-2 border-4 h-2/6 p-5 shadow-xl" id="resumedownload">
+                <!-- <h1 id="resumedoenloadinner">RESUME</h1> -->
+                <div class="row" id="ajay">
+                    <!-- left -->
+                    <div class="col-lg-5 bg-orange-300 p-2" id="">
+                        <br>
+                        <div id="rightimage" class="flex justify-center">
+                            <img src="" id="displayspecial" alt="" class="h-52 w-52 ">
+                        </div>
+                        <br>
+                        <p id="aboutrightone" class="text-white text-center font-bold text-xl"> </p>
+                        <hr class="border-4 ">
+
+                        <br>
+                        <div id="rightone">
+                            <h1 class="text-xl text-white font-bold">About</h1>
+                            <hr class="border-4 ">
+
+                            <p id="aboutrightoneemail" class="text-white"> </p>
+                            <p id="aboutrightonephone" class="text-white"> </p>
+                            <p id="aboutrightonesummary" class="text-white"> </p>
+                            <br>
+
+                            <h1 class="text-xl text-white font-bold">Skills</h1>
+                            <hr class="border-4 ">
+
+                            <p id="skillsrightone" class="text-white"></p>
+
+                        </div>
+
+
+                    </div>
+                    <div class="col-lg-7">
+                        <div id="Rachivements">
+                            <h1 class="text-2xl font-bold">ACHIEVEMENTS</h1>
+                            <hr class="border-4 bg-white">
+
+                            <p id="Rachivements1" class="font-bold"></p>
+                            <p id="Rachivements2" class=""></p>
+                        </div>
+                        <br>
+                        <br>
+                        <div id="REDUCATION">
+                            <h1 class="text-2xl font-bold">EDUCATION</h1>
+                            <hr class="border-4 bg-white">
+
+                            <p id="REDUCATION1"></p>
+                            <p id="REDUCATION2"></p>
+                            <p id="REDUCATION3"></p>
+                            <p id="REDUCATION4"></p>
+                            <p id="REDUCATION5"></p>
+                        </div>
+                        <br>
+                        <br>
+                        <div id="REXPERIENCE">
+                            <h1 class="text-2xl font-bold">EXPERIENCE</h1>
+                            <hr class="border-4 bg-white">
+
+                            <p id="REXPERIENCE1"></p>
+                            <p id="REXPERIENCE2"></p>
+                            <p id="REXPERIENCE3"></p>
+                            <p id="REXPERIENCE4"></p>
+                            <p id="REXPERIENCE5"></p>
+                        </div>
+                        <br>
+                        <br>
+                        <div id="RPROJECTS">
+                            <h1 class="text-2xl font-bold">PROJECTS</h1>
+                            <hr class="border-4 bg-white">
+
+                            <p id="RPROJECTS1"></p>
+                            <p id="RPROJECTS2"></p>
+                            <p id="RPROJECTS3"></p>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-4 bg-red-600 h-96"></div> -->
+                </div>
+            </div>
+            <!-- </div> -->
+        </div>
+    </div>
+    <hr class="border-4">
+    <br>
+    <!-- <br>
+    <br> -->
+    <div id="footer" class="m-auto text-center">
+        <button id="print">Print Cv</button>
+        <button onclick="downloadCode()">DownloadPdf</button>
+        <button id="jobs">Jobs</button>
+        <button id="project">Project</button>
+    </div>
+    <br>
+    <br>
+    <div id="jobsearch">
+        <div class="center" id="center">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+
+    </div>
+  
+
+    <br>
+    <br>
+    <br>
+
+
+
+
+    <!-- jobs api search implementation -->
+    <script type="importmap">
+    {
+      "imports": {
+        "@google/generative-ai": "https://esm.run/@google/generative-ai"
+      }
+    }
+  </script>
+    <script type="module">
+        import { GoogleGenerativeAI } from "@google/generative-ai";
+        // let apikey = "";
+        const API_KEY = "AIzaSyAYhghPB47muOGdbJ-p26A7AUxRSxQ94cw";
+        const md = window.markdownit();
+        // Access your API key (see "Set up your API key" above)
+        const genAI = new GoogleGenerativeAI(API_KEY);
+        let skillssearch = document.getElementById('skills');
+        // console.log(userinput.value)
+        let text;
+        async function run() {
+            // For text-only input, use the gemini-pro model
+            const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+
+            const prompt = skillssearch.value + "skill based jobs with description and there links";
+
+            const result = await model.generateContent(prompt);
+            const response = await result.response;
+            text = response.text();
+            document.getElementById('jobsearch').innerHTML = `<h1>Jobs based on your skills</h1>`
+            document.getElementById('jobsearch').innerHTML += md.render(text);
+
+            console.log(text);
+        }
+        document.getElementById('jobs').addEventListener('click', () => {
+            
+            // document.getElementById('jobsearch').style.display = "block"
+            document.getElementById('jobsearch').style.visibility = "visible"
+            // document.getElementById('center').style.visibility = "visible"
+            // document.getElementById('center').style.display = "flex"
+            console.log(skillssearch.value)
+            run()
+           
+        })
+
+
+        //project js code
+        async function run1() {
+            // For text-only input, use the gemini-pro model
+            const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+
+            const prompt = skillssearch.value + "programing language projects with description and there referal link";
+
+            const result = await model.generateContent(prompt);
+            const response = await result.response;
+            text = response.text();
+            document.getElementById('jobsearch').innerHTML = `<h1>Projects based on your skills</h1>`
+            document.getElementById('jobsearch').innerHTML += md.render(text);
+
+            console.log(text);
+        }
+        document.getElementById('project').addEventListener('click', () => {
+            document.getElementById('jobsearch').innerHTML="";
+
+            // console.log(skillssearch.value)
+            // document.getElementById('jobsearch').style.display = "block"
+            run1()
+            document.getElementById('jobsearch').style.visibility = "visible"
+            // document.getElementById('center').style.visibility = "visible"
+            // document.getElementById('center').style.display = "flex"
+            console.log(skillssearch.value)
+
+        })
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="./resume.js"></script>
+
+</body>
+
+</html>

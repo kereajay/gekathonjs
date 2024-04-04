@@ -133,9 +133,9 @@ function generatePDF() {
 
 //print the right  part page
 let print1=document.getElementById('print');
-let rightcontent=document.getElementById('resumedownload');
+let rightcontent=document.getElementById('preview-sc');
 print1.addEventListener('click',()=>{
-    var printContents = document.getElementById('resumedownload').innerHTML;
+    var printContents = document.getElementById('preview-sc').innerHTML;
     var originalContents = document.body.innerHTML;
 
     document.body.innerHTML = printContents;

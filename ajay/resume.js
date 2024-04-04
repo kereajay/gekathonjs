@@ -118,17 +118,15 @@ document.getElementById('skills').addEventListener('change',()=>{
 
 //DOWNLOADING PDF CODE
 function generatePDF() {
-        
-    const element = document.getElementById("resumedownload");
-    // document.getElementById("reportbox").style.display = "block";
-    // document.getElementById("reportbox").style.marginTop = "0px"; 
-    // document.getElementById("pageprint").style.border = "1px solid black";
-    html2pdf().from(element).save('download.pdf'); 
+    const element = document.getElementById("preview-sc");
+
+    html2pdf().from(element).save('download.pdf');    
     }
+    
     function downloadCode(){
-        var x = document.getElementById("ajay");  
-        generatePDF();
-        setTimeout(function() { window.location=window.location;},3000);}
+    generatePDF();
+    setTimeout(function() { window.location=window.location;},3000);
+}
 
 
 
@@ -159,10 +157,23 @@ print1.addEventListener('click',()=>{
 
 
 //project
-document.getElementById('project').addEventListener('click',()=>{
-    console.log("mahakal")
+// document.getElementById('project').addEventListener('click',()=>{
+//     console.log("mahakal")
     
-})
+// })
+
+// logout
+let currentuser=localStorage.getItem('currentuser')
+       if(!currentuser){
+        window.location.href="./index.html";
+
+       }
+        let btn=document.getElementById('logout');
+        btn.addEventListener('click',()=>{
+            localStorage.removeItem("currentuser");
+            window.location.href="./index.html";
+
+        })
 
 
 

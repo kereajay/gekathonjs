@@ -47,6 +47,11 @@
             border: orange;
             border-radius: 10px;
         }
+        .mubuttons button:hover{
+            background: linear-gradient(to right,rgb(255, 255, 95), orange);
+
+
+        }
 
         .animate {
             width: 1100px;
@@ -401,16 +406,16 @@
         <img src="./images/portfolio.png" alt="" height="50px" width="50px">
         <a class="font-bold text-2xl bg-gradient-to-r from-orange-400 to-yellow-500 text-transparent bg-clip-text resumebuilder"
             href="#">ResumeBuilder</a>
-            <br>
-            <br>
-            <br>
-           
+        <br>
+        <br>
+        <br>
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <br>
-       
+
         <div class="collapse navbar-collapse mubuttons" id="navbarSupportedContent">
 
             <button id="login" data-toggle="modal" data-target="#loginpopup">Login</button>
@@ -471,7 +476,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action=""  name="Registerform" onsubmit="return validateform()">
+                    <form action="" name="Registerform" onsubmit="return validateform()">
                         <label for="name">Name:-</label>
                         <br>
                         <input type="text" id="name" placeholder="name">
@@ -498,7 +503,8 @@
                 </div>
                 <div class="modal-footer">
                     <p>already have a account</p>
-                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#loginpopup">Login</button>
+                    <button type="button" class="btn btn-secondary" data-toggle="modal"
+                        data-target="#loginpopup">Login</button>
                     <br>
                 </div>
             </div>
